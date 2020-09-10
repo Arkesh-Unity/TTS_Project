@@ -1,0 +1,121 @@
+﻿Build1=Default,b4x.tts.demo
+File1=blue_background.jpg
+File10=Volume_Off.png
+File2=layout.bal
+File3=layout1.bal
+File4=mic.jpg
+File5=mics.png
+File6=mute.png
+File7=on.png
+File8=speaker.png
+File9=volume.png
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=core
+Library2=runtimepermissions
+Library3=hmsttslibs
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="28"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~	~\n~		AddManifestText(~\n~	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>~\n~<uses-permission android:name="android.permission.INTERNET"/>~\n~<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>~\n~<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>~\n~<uses-permission android:name="android.permission.RECORD_AUDIO"/>~\n~<uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>~\n~	)~\n~	~\n~	~\n~	AddApplicationText(~\n~	<provider android:exported="false" android:authorities="$PACKAGE$.AGCInitializeProvider" android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"/>~\n~<meta-data android:name="com.huawei.hms.client.service.name:ml-voice-tts" android:value="ml-voice-tts:2.0.1.304.008"/>~\n~<uses-library android:name="org.apache.http.legacy" android:required="false"/>~\n~<service android:exported="false" android:name="com.huawei.agconnect.core.ServiceDiscovery"/>~\n~	<meta-data ~\n~	android:name="com.huawei.hms.client.service.name:ml-voice-tts"~\n~	 android:value="ml-voice-tts:2.0.1.302"/>~\n~	<meta-data~\n~	 android:value="ml-computer-net:2.0.1.300" ~\n~	 android:name="com.huawei.hms.client.service.name:ml-computer-net"/>~\n~	<uses-library ~\n~	android:name="org.apache.http.legacy" ~\n~	android:required="false"/>~\n~	<meta-data~\n~	 android:name="com.huawei.hms.client.service.name:ml-computer-ha-inner" ~\n~	 android:value="ml-computer-ha-inner:2.0.1.300"/>~\n~~\n~	<meta-data~\n~	 android:name="com.huawei.hms.client.service.name:base"~\n~	  android:value="base:4.0.1.300"/>~\n~~\n~<!-- SDK依赖的HMSCore的最低api level元数据 -->~\n~~\n~~\n~<meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1"/>~\n~~\n~~\n~-<activity android:name="com.huawei.hms.activity.BridgeActivity" android:theme="@android:style/Theme.Translucent" android:hardwareAccelerated="true" android:exported="false" android:excludeFromRecents="true" android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout">~\n~~\n~<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>~\n~~\n~</activity>~\n~~\n~<activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"> </activity>~\n~~\n~~\n~-<activity android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:theme="@style/upsdkDlDialog" android:exported="false" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout">~\n~~\n~<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar"/>~\n~~\n~</activity>~\n~~\n~~\n~-<activity android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:theme="@style/upsdkDlDialog" android:exported="false" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout">~\n~~\n~<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>~\n~~\n~</activity>~\n~~\n~<provider android:name="com.huawei.hms.update.provider.UpdateProvider" android:exported="false" android:grantUriPermissions="true" android:authorities="$PACKAGE$.hms.update.provider"> </provider>~\n~)	~\n~		~\n~SetApplicationAttribute(android:name, "b4x.tts.demo.MainApplication")~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~
+Module1=Starter
+NumberOfFiles=10
+NumberOfLibraries=3
+NumberOfModules=1
+Version=9.9
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A TTS
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+	#AdditionalJar: base-4.0.1.300.aar
+	#AdditionalJar: agconnect-core-1.0.1.300.aar
+	#AdditionalJar: ml-computer-agc-inner-2.0.1.300.aar
+	#AdditionalJar: ml-computer-commonutils-inner-2.0.1.300.aar
+	#AdditionalJar: ml-computer-ha-inner-2.0.1.300.aar
+	#AdditionalJar: ml-computer-net-2.0.1.300.aar
+	#AdditionalJar: tasks-1.3.1.302.aar
+	#AdditionalJar: network-common-4.0.2.301.aar
+	#AdditionalJar: network-grs-4.0.2.301.aar
+	#AdditionalJar: ml-computer-grs-inner-2.0.1.300.aar
+	#AdditionalJar: okhttp-3.12.0.jar
+	#AdditionalJar: okio-1.15.0.jar
+	#AdditionalJar: ml-computer-voice-tts-2.0.1.300.aar
+	
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	Private rp As RuntimePermissions
+	
+	Dim tts As HMSTTS
+	Private text As String
+	Dim EditText1 As EditText
+	Private ImageView1 As ImageView
+	Private Button1 As Button
+	Private ImageView2 As ImageView
+	
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("layout1")
+	
+	rp.CheckAndRequest(rp.PERMISSION_READ_EXTERNAL_STORAGE)
+	rp.CheckAndRequest(rp.PERMISSION_WRITE_EXTERNAL_STORAGE)
+	rp.CheckAndRequest(rp.PERMISSION_RECORD_AUDIO)
+	Button1.TextColor  = Colors.White
+
+	tts.inittts
+
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+Sub Activity_PermissionResult (Permission As String, Result As Boolean)
+	Log($"Activity_PermissionResult(${Permission},${Result})"$)
+End Sub
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub Button1_Click
+	text = EditText1.Text
+	tts.ListenFortts(text)	
+End Sub
+
+Sub Listener_Start(val As String)
+		
+	ImageView2.Bitmap=LoadBitmap(File.DirAssets,"volume.png")
+	
+End Sub
+
+
+Sub Listener_Stop(val As String)
+		
+	ImageView2.Bitmap=LoadBitmap(File.DirAssets,"mute.png")
+	ToastMessageShow("Service Stoped", True)
+	
+End Sub

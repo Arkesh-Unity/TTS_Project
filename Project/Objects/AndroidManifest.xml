@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="b4x.tts.demo"
+	android:versionCode="1"
+	android:versionName=""
+	android:installLocation="internalOnly">
+	
+	<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="28"/>
+	<supports-screens android:largeScreens="true" 
+	    android:normalScreens="true" 
+	    android:smallScreens="true" 
+	    android:anyDensity="true"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+	<application
+		android:name="b4x.tts.demo.MainApplication"
+		android:icon="@drawable/icon"
+		android:label="B4A TTS"
+		android:theme="@style/DarkTheme">
+		
+		<provider android:exported="false" android:authorities="b4x.tts.demo.AGCInitializeProvider" android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"/>
+		<meta-data android:name="com.huawei.hms.client.service.name:ml-voice-tts" android:value="ml-voice-tts:2.0.1.304.008"/>
+		<uses-library android:name="org.apache.http.legacy" android:required="false"/>
+		<service android:exported="false" android:name="com.huawei.agconnect.core.ServiceDiscovery"/>
+			<meta-data 
+			android:name="com.huawei.hms.client.service.name:ml-voice-tts"
+			 android:value="ml-voice-tts:2.0.1.302"/>
+			<meta-data
+			 android:value="ml-computer-net:2.0.1.300" 
+			 android:name="com.huawei.hms.client.service.name:ml-computer-net"/>
+			<uses-library 
+			android:name="org.apache.http.legacy" 
+			android:required="false"/>
+			<meta-data
+			 android:name="com.huawei.hms.client.service.name:ml-computer-ha-inner" 
+			 android:value="ml-computer-ha-inner:2.0.1.300"/>
+		
+			<meta-data
+			 android:name="com.huawei.hms.client.service.name:base"
+			  android:value="base:4.0.1.300"/>
+		
+		<!-- SDK依赖的HMSCore的最低api level元数据 -->
+		
+		
+		<meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1"/>
+		
+		
+		-<activity android:name="com.huawei.hms.activity.BridgeActivity" android:theme="@android:style/Theme.Translucent" android:hardwareAccelerated="true" android:exported="false" android:excludeFromRecents="true" android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout">
+		
+		<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+		
+		</activity>
+		
+		<activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"> </activity>
+		
+		
+		-<activity android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:theme="@style/upsdkDlDialog" android:exported="false" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout">
+		
+		<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar"/>
+		
+		</activity>
+		
+		
+		-<activity android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:theme="@style/upsdkDlDialog" android:exported="false" android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout">
+		
+		<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+		
+		</activity>
+		
+		<provider android:name="com.huawei.hms.update.provider.UpdateProvider" android:exported="false" android:grantUriPermissions="true" android:authorities="b4x.tts.demo.hms.update.provider"> </provider>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".main"
+			android:label="B4A TTS"
+			android:screenOrientation="unspecified">
+			<intent-filter>
+			   <action android:name="android.intent.action.MAIN" />
+			   <category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			
+		</activity>
+		<service android:name=".starter">
+		</service>
+		<receiver android:name=".starter$starter_BR">
+		</receiver>
+	</application>
+</manifest>
